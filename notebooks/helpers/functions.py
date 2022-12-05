@@ -24,8 +24,8 @@ def add_time_stamp_to_dataframe(df, col_name):
 
 # COMMAND ----------
 
-def save_dataframe_as_parquet(df,folder_name):
-    df.write.mode('overwrite').parquet(f'{processed_folder_path}/{folder_name}')
+def save_dataframe_as_parquet(df,path_to_save_file):
+    df.write.mode('overwrite').parquet(path_to_save_file)
 
 # COMMAND ----------
 

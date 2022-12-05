@@ -14,5 +14,5 @@ races_df = add_time_stamp_to_dataframe(circuits_df, FILE_NAME)
 
 races_df = circuits_df.withColumnRenamed("name", f"{FILE_NAME}_name").drop("url")
 
-save_dataframe_as_parquet(circuits_df, f'{PROCESSED_FOLDER_PATH}/{FILE_NAME}')
+save_dataframe_as_parquet(races_df, f"{PROCESSED_FOLDER_PATH}/{FILE_NAME}")
 dbutils.notebook.exit(MESSAGE_ON_NOTEBOOK_SUCCESSY)

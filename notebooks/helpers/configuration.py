@@ -5,4 +5,4 @@
 
 RAW_FOLDER_PATH = 'dbfs:/mnt/formuleinsstorage/rawdata/unziped/'
 PROCESSED_FOLDER_PATH = 'dbfs:/mnt/formuleinsstorage/processeddata'
-MESSAGE_TO_WHEN_COMPLETING_NOTEBOOK_SUCCESSFULLY = 'Success'
+MESSAGE_ON_NOTEBOOK_SUCCESSY = 'Success'

@@ -36,3 +36,13 @@ result
 
 result = dbutils.notebook.run('./ingestions/ingest_qualifying',0)
 result
+
+# COMMAND ----------
+
+result = dbutils.notebook.run('./ingestions/ingest_driver_standing',0)
+result
+
+# COMMAND ----------
+
+result = dbutils.notebook.run('./ingestions/ingest_constructor_standings',0)
+result

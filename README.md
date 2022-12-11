@@ -17,4 +17,4 @@
 6. and permission to Storage account to share its blob with Azure Databricks
 6. Give Databricks the Github personal token so that it can commiunicate with repo
 4. Create secret scopes called `formula1-scope` via: `https://<databricks-instance>#secrets/createScope`
-
+![Add scope to databricks](https://user-images.githubusercontent.com/4312244/206810911-853f5f46-3af8-4311-950a-79c58a7933fb.png)

@@ -36,3 +36,8 @@ def read_parquet_file(path_to_parquet_file):
 
 def read_csv_file(path_csv_file):
     return spark.read.option('header',True).option('inferSchema',True).csv(path_csv_file)
+
+# COMMAND ----------
+
+def save_and_partition_by_dataframe_as_parquet(df,column_to_partition_by,path_to_save_file):
+    df.write.mode('overwrite').partitionBy(column_to_partition_by).parquet(path_to_save_file)

@@ -1,18 +1,17 @@
 # Databricks notebook source
-# THE FOLLOWING CODE ONLY WORKS ON DATABRICKS
-
-# Databricks notebook source
-STORAGE_ACCOUNT = "formuleinsstorage"
-
-CONTAINER_PROCESSED_DATA = "processeddata"
-CONTAINER_RAW_DATA = "rawdata"
+# MAGIC %run "./configuration"
 
 # COMMAND ----------
 
 CLIENT_ID = dbutils.secrets.get(scope='formula1-scope',key='client-id')
 CLIENT_SECRET = dbutils.secrets.get(scope='formula1-scope',key='client-secret')
-SUBSCRIPTION_ID = dbutils.secrets.get(scope='formula1-scope',key='subscription-id')
 TENANT_ID = dbutils.secrets.get(scope='formula1-scope',key='tenant-id')
+
+# COMMAND ----------
+
+CLIENT_ID = "17ceaf76-7809-4569-9e47-da224211534a"
+CLIENT_SECRET = "eY98Q~qRUmNsttzzRJHYNfYIE6LEE18ORFJwIbJa"
+TENANT_ID = "1f2519d6-a33d-4336-abb5-8085bcb587d6"
 
 # COMMAND ----------
 
@@ -34,13 +33,12 @@ def mount_data(storage_account,container):
 
 mount_data(STORAGE_ACCOUNT,CONTAINER_PROCESSED_DATA)
 mount_data(STORAGE_ACCOUNT,CONTAINER_RAW_DATA)
-mount_data(STORAGE_ACCOUNT,CONTAINER_CONFIG_FILE)
+#mount_data(STORAGE_ACCOUNT,CONTAINER_CONFIG_FILE)
 
 # COMMAND ----------
 
 #dbutils.fs.ls(f"/mnt/{STORAGE_ACCOUNT}/{CONTAINER_PROCESSED_DATA}")
 #dbutils.fs.ls(f"/mnt/{STORAGE_ACCOUNT}/{CONTAINER_RAW_DATA}")
-dbutils.fs.ls(f"/mnt/{STORAGE_ACCOUNT}/{CONTAINER_CONFIG_FILE}")
 
 # COMMAND ----------
 
@@ -51,4 +49,3 @@ def unmount_data(storage_account,container):
 
 #unmount_data(STORAGE_ACCOUNT,CONTAINER_PROCESSED_DATA)
 #unmount_data(STORAGE_ACCOUNT,CONTAINER_RAW_DATA)
-#unmount_data(STORAGE_ACCOUNT,CONTAINER_CONFIG_FILE)

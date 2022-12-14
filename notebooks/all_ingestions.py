@@ -24,7 +24,7 @@ result
 
 # COMMAND ----------
 
-result = dbutils.notebook.run('./ingestions/ingestion_races',0)
+result = dbutils.notebook.run('./ingestions/ingest_races',0)
 result
 
 # COMMAND ----------

@@ -1,12 +1,5 @@
 # Formula1-Databricks
 
-### Ingestion
-
-### Transform
-
-## Load
-
-
 # How can we use this repository ?
 
 1. Run the pipeline of Formula1-Terraform and find the created Azure Databricks and Azure Data Factory.
@@ -18,4 +11,9 @@
 7. Give Databricks the Github personal token so that it can commiunicate with repo
 8. Create secret scopes called `formula1-scope` via: `https://<databricks-instance>#secrets/createScope`
 ![Add scope to databricks](https://user-images.githubusercontent.com/4312244/206810911-853f5f46-3af8-4311-950a-79c58a7933fb.png)
-9. Generate an AccessToken to do that * Open Databricks -> User Setting -> Access Token -> Click on Generate new Token* 
+9. In order to find access to from DataFactory to the Databricks, you have two main options:
+  9.1. Generate an AccessToken from following path: * Open Databricks -> User Setting -> Access Token -> Click on Generate new Token* and use it linkedservice ![image](https://user-images.githubusercontent.com/4312244/207609564-135ee42f-76c9-43e0-9386-ba382ce48b3a.png)
+  9.2. Alternatievly, you can select the *Managed service identity* in the linked service and it will offer a "Managed identity name", then refer to the Databricks-> IAM -> Add role -> Select your suggested "Managed identity name" and chose a contributor role to it.
+  ![image](https://user-images.githubusercontent.com/4312244/207610488-46bfedfc-8aed-4095-a660-9b98440566f3.png)
+
+ 

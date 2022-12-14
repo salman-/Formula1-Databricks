@@ -1,5 +1,5 @@
 # Databricks notebook source
-result = dbutils.notebook.run('./ingestions/ingest_circuite_file',0)
+result = dbutils.notebook.run('./ingestions/ingest_circuite',0)
 result
 
 # COMMAND ----------
@@ -24,7 +24,7 @@ result
 
 # COMMAND ----------
 
-result = dbutils.notebook.run('./ingestions/ingest_races',0)
+result = dbutils.notebook.run('./ingestions/ingestion_races',0)
 result
 
 # COMMAND ----------

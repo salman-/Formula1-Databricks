@@ -15,5 +15,5 @@
   9.1. Generate an AccessToken from following path: * Open Databricks -> User Setting -> Access Token -> Click on Generate new Token* and use it linkedservice ![image](https://user-images.githubusercontent.com/4312244/207609564-135ee42f-76c9-43e0-9386-ba382ce48b3a.png)
   9.2. Alternatievly, you can select the *Managed service identity* in the linked service and it will offer a "Managed identity name", then refer to the Databricks-> IAM -> Add role -> Select your suggested "Managed identity name" and chose a contributor role to it.
   ![image](https://user-images.githubusercontent.com/4312244/207610488-46bfedfc-8aed-4095-a660-9b98440566f3.png)
-
+[This video explains how to connect DataFactory to Databricks](https://www.youtube.com/watch?v=uk1wvsBvF34)
  

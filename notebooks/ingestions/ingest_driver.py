@@ -20,7 +20,6 @@ drivers_df = (
     .drop("url")
 )
 
-save_and_partition_by_dataframe_as_parquet(
-    drivers_df, "driver_id", f"{PROCESSED_FOLDER_PATH}/{FILE_NAME}"
-)
+save_dataframe_as_parquet(drivers_df, f"{PROCESSED_FOLDER_PATH}/{FILE_NAME}")
+#save_and_partition_by_dataframe_as_parquet(drivers_df, "driver_id", f"{PROCESSED_FOLDER_PATH}/{FILE_NAME}")
 dbutils.notebook.exit(MESSAGE_ON_NOTEBOOK_SUCCESSY)
